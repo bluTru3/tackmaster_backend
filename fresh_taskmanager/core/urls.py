@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.http import JsonResponse
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-from todo import views
+from api import views
 
 def home(request):
     return JsonResponse({
@@ -10,7 +10,7 @@ def home(request):
         'endpoints': {
             'register': '/api/register/',
             'login': '/api/login/',
-            'tasks': '/api/tasks/',
+            'tasks': '/api/',
             'admin': '/admin/',
         }
     })
@@ -22,5 +22,5 @@ urlpatterns = [
     path('api/login/', TokenObtainPairView.as_view(), name='login'),
     path('api/refresh/', TokenRefreshView.as_view(), name='refresh'),
     path('api/me/', views.me, name='me'),
-    path('api/', include('todo.urls')),
+    path('api/', include('api.urls')),
 ]

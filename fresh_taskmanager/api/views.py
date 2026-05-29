@@ -20,16 +20,15 @@ class TaskViewSet(viewsets.ModelViewSet):
 def register(request):
     username = request.data.get('username')
     password = request.data.get('password')
-    email = request.data.get('email', '')
     
     if not username or not password:
-        return Response({'error': 'Username and password required'}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({'error': 'Username and password required'}, status=400)
     
     if User.objects.filter(username=username).exists():
-        return Response({'error': 'Username already exists'}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({'error': 'Username already exists'}, status=400)
     
-    user = User.objects.create_user(username=username, email=email, password=password)
-    return Response(UserSerializer(user).data, status=status.HTTP_201_CREATED)
+    user = User.objects.create_user(username=username, password=password)
+    return Response(UserSerializer(user).data, status=201)
 
 @api_view(['GET'])
 @permission_classes([permissions.IsAuthenticated])

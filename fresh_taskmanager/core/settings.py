@@ -13,8 +13,7 @@ INSTALLED_APPS = [
     gunicorn==21.2.0
     psycopg2-binary==2.9.9
     python-dotenv==1.0.0
-    dj-database-url==2.1.0
-    setuptools==81.0.0
+    
 ]
 
 MIDDLEWARE = [

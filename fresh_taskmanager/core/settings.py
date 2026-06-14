@@ -4,7 +4,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'd=8^@^9o!6fo8_$6$v+&c+)&w)ec8hh4(-)xlag!t7bjw2hadji'
 DEBUG = True
-ALLOWED_HOSTS = ['tackmaster-api.onrender.com','localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['tackmaster-api.onrender.com','localhost', '127.0.0.1', 'fuzzy-giggle-6jg7xpr4w99frgv5-5173.app.github.dev']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -35,7 +35,9 @@ ROOT_URLCONF = 'core.urls'
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
     'https://tackmaster-api.onrender.com',
-    'https://taskmanager-frontend.onrender.com',  #Remember to add frontend URL B!
+    'https://taskmanager-frontend.onrender.com', 
+    'https://taskmanager-frontend.onrender.com/'
+    'https://fuzzy-giggle-6jg7xpr4w99frgv5-5173.app.github.dev'
 ]
 
 REST_FRAMEWORK = {

@@ -6,16 +6,15 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'rest_framework',
-    'rest_framework_simplejwt',
-    'corsheaders',
-    'api',
+    'Django==4.2.0
+    djangorestframework==3.14.0
+    djangorestframework-simplejwt==5.3.0
+    django-cors-headers==4.3.0
+    gunicorn==21.2.0
+    psycopg2-binary==2.9.9
+    python-dotenv==1.0.0
+    dj-database-url==2.1.0
+    setuptools==81.0.0
 ]
 
 MIDDLEWARE = [

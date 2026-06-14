@@ -6,7 +6,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
-    'Django==4.2.0
+    Django==4.2.0
     djangorestframework==3.14.0
     djangorestframework-simplejwt==5.3.0
     django-cors-headers==4.3.0

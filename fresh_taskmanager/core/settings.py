@@ -1,20 +1,24 @@
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 SECRET_KEY = 'd=8^@^9o!6fo8_$6$v+&c+)&w)ec8hh4(-)xlag!t7bjw2hadji'
 DEBUG = True
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
-    Django==4.2.0
-    djangorestframework==3.14.0
-    djangorestframework-simplejwt==5.3.0
-    django-cors-headers==4.3.0
-    gunicorn==21.2.0
-    psycopg2-binary==2.9.9
-    python-dotenv==1.0.0
-    
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework_simplejwt',
+    'corsheaders',
+    'api',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
